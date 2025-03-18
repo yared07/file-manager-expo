@@ -19,21 +19,31 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "usesIcloudStorage": true
+      "usesIcloudStorage": true,
+      "bundleIdentifier": "com.testapp.filemanager"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFF"
       },
-      "package": "com.testapp.filemanager"
+      "package": "com.testapp.filemanager",
+      "permissions": [
+        "android.permission.CAMERA"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-barcode-scanner",
-      "expo-secure-store"
-    ]
+      "expo-secure-store",
+      "@config-plugins/detox"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "fdd38eba-04b2-402c-b734-0d479b8bed05"
+      }
+    }
   }
 }
